@@ -19,7 +19,7 @@ apt-get update
 
 #install some packages with need for UserLAnd
 apt-get install -y --no-install-recommends sudo dropbear libgl1-mesa-glx tightvncserver xterm xfonts-base twm openbox expect
-DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install octave less octave-control octave-financial octave-io octave-missing-functions octave-optim octave-signal octave-specfun octave-statistics octave-symbolic octave-image gnuplot-x11 pstoedit fonts-freefont-otf qt5-default qt5-assistant
+DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install r-base r-base-dev
 
 #clean up after ourselves
 apt-get clean

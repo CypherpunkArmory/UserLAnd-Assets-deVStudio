@@ -8,7 +8,7 @@ jobs:
   build_arm:
     machine: true
 
-    working_directory: ~/UserLAnd-Assets-Debian
+    working_directory: ~/UserLAnd-Assets-R
 
     steps:
       - checkout
@@ -29,7 +29,7 @@ jobs:
   build_arm64:
     machine: true
 
-    working_directory: ~/UserLAnd-Assets-Debian
+    working_directory: ~/UserLAnd-Assets-R
 
     steps:
       - checkout
@@ -50,7 +50,7 @@ jobs:
   build_x86:
     machine: true
 
-    working_directory: ~/UserLAnd-Assets-Debian
+    working_directory: ~/UserLAnd-Assets-R
 
     steps:
       - checkout
@@ -65,7 +65,7 @@ jobs:
   build_x86_64:
     machine: true
 
-    working_directory: ~/UserLAnd-Assets-Debian
+    working_directory: ~/UserLAnd-Assets-R
 
     steps:
       - checkout
