@@ -20,7 +20,7 @@ archi=$(dpkg --print-architecture)
 case "$archi" in
   arm64) wget --no-check-certificate -O vscode.deb 'http://code.visualstudio.com/sha/download?build=stable&os=linux-deb-arm64'
     ;;
-  armhf) wget --no-check-certificate -O vscode.deb 'http://code.visualstudio.com/sha/download?build=stable&os=linux-deb-arm32'
+  armhf) wget --no-check-certificate -O vscode.deb 'http://code.visualstudio.com/sha/download?build=stable&os=linux-deb-armhf'
     ;;
   amd64) wget --no-check-certificate -O vscode.deb 'http://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
     ;;
