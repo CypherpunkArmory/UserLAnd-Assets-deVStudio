@@ -15,7 +15,7 @@ apt-get update
 
 #install some packages with need for UserLAnd
 apt-get install -y --no-install-recommends sudo dropbear libgl1-mesa-glx tightvncserver xterm xfonts-base twm openbox expect
-DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install r-base r-base-dev
+apt-get install -y wget
 archi=$(dpkg --print-architecture)
 case "$archi" in
   arm64) wget --no-check-certificate -O vscode.deb 'http://code.visualstudio.com/sha/download?build=stable&os=linux-deb-arm64'
