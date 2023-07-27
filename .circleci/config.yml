@@ -8,7 +8,7 @@ jobs:
   build_arm:
     machine: true
 
-    working_directory: ~/UserLAnd-Assets-R
+    working_directory: ~/UserLAnd-Assets-deVStudio
 
     steps:
       - checkout
@@ -29,7 +29,7 @@ jobs:
   build_arm64:
     machine: true
 
-    working_directory: ~/UserLAnd-Assets-R
+    working_directory: ~/UserLAnd-Assets-deVStudio
 
     steps:
       - checkout
@@ -47,25 +47,10 @@ jobs:
           paths:
             - release/*    
 
-  build_x86:
-    machine: true
-
-    working_directory: ~/UserLAnd-Assets-R
-
-    steps:
-      - checkout
-      - run:
-          name: build x86 assets
-          command: ./buildArch.sh x86
-      - persist_to_workspace:
-          root: .
-          paths:
-            - release/*    
-
   build_x86_64:
     machine: true
 
-    working_directory: ~/UserLAnd-Assets-R
+    working_directory: ~/UserLAnd-Assets-deVStudio
 
     steps:
       - checkout
@@ -104,10 +89,6 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - build_x86:
-          filters:
-            tags:
-              only: /.*/
       - build_x86_64:
           filters:
             tags:
@@ -116,7 +97,6 @@ workflows:
           requires:
             - build_arm
             - build_arm64
-            - build_x86
             - build_x86_64
           filters:
             branches:
