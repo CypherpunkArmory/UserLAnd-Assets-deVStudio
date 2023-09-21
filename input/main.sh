@@ -30,6 +30,9 @@ case "$archi" in
 esac
 apt install -y ./vscode.deb
 rm -f ./vscode.deb
+apt-get install -y firefox-esr
+apt-get install -y git
+curl -fsSL https://code-server.dev/install.sh | sh
 
 #clean up after ourselves
 apt-get clean
