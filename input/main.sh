@@ -15,7 +15,7 @@ apt-get update
 
 #install some packages with need for UserLAnd
 apt-get install -y --no-install-recommends sudo dropbear libgl1-mesa-glx tightvncserver xterm xfonts-base twm openbox expect
-apt-get install -y wget gpg curl npm
+apt-get install -y wget gpg
 archi=$(dpkg --print-architecture)
 case "$archi" in
   arm64) wget --no-check-certificate -O vscode.deb 'http://code.visualstudio.com/sha/download?build=stable&os=linux-deb-arm64'
@@ -30,8 +30,14 @@ case "$archi" in
 esac
 apt install -y ./vscode.deb
 rm -f ./vscode.deb
+
 apt-get install -y firefox-esr
 apt-get install -y git
+
+apt-get install -y curl apt-transport-https software-properties-common
+curl -sL https://deb.nodesource.com/setup_16.x | bash
+apt-get install -y nodejs
+
 curl -fsSL https://code-server.dev/install.sh | sh
 
 #clean up after ourselves
