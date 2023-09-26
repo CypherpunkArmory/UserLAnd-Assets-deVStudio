@@ -34,11 +34,9 @@ rm -f ./vscode.deb
 apt-get install -y firefox-esr
 apt-get install -y git
 
-apt-get install -y curl apt-transport-https software-properties-common
-curl -sL https://deb.nodesource.com/setup_16.x | bash
-apt-get install -y nodejs
-
-curl -fsSL https://code-server.dev/install.sh | sh
+apt-get install -y build-essential pkg-config python3 npm gdb
+npm config set python python3
+npm install --global code-server --unsafe-perm
 
 #clean up after ourselves
 apt-get clean
